@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>collapse-toolbar Demo</title>
+  <script src="../platform/platform.js"></script>
+  <link rel="import" href="collapse-toolbar.html">
+  <link rel="import" href="../core-icon-button/core-icon-button.html">
+  <style>
+  collapse-toolbar {
+    background: #E4E4E4;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    height: 35px;
+    vertical-align: middle;
+  }
+  </style>
+</head>
+
+<body unresolved>
+  <!-- <p>An `collapse-toolbar` looks like this:</p> -->
+
+  <collapse-toolbar query="max-width: 500px">
+    <div flex class="logo">
+      <a href="#" flex>
+        <img src="lockup.png">
+      </a>
+    </div>
+    <a href="#">Quickstart</a>
+    <a href="#">CSS</a>
+    <a href="#">Components</a>
+  </collapse-toolbar>
+
+</body>
+
+</html>

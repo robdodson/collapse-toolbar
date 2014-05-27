@@ -1,0 +1,10 @@
+{
+  "name": "collapse-toolbar",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "core-media-query": "Polymer/core-media-query#master",
+    "core-menu": "Polymer/core-menu#master",
+    "core-menu-button": "Polymer/core-menu-button#master"
+  }
+}

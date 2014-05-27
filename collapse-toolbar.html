@@ -1,0 +1,22 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-media-query/core-media-query.html">
+<link rel="import" href="../core-menu-button/core-menu-button.html">
+<polymer-element name="collapse-toolbar" attributes="query" noscript>
+  <template>
+    <link rel="stylesheet" href="collapse-toolbar.css">
+    <core-media-query query="{{query}}" queryMatches="{{smallScreen}}">
+    </core-media-query>
+
+    <div id="toolbar" layout horizontal center>
+      <content select=".logo"></content>
+      <template if="{{smallScreen}}">
+        <core-menu-button icon="menu"
+          inlineMenu halign="right" valign="bottom">
+          <content></content>
+        </core-menu-button>
+      </template>
+      <content></content>
+    </div>
+
+  </template>
+</polymer-element>

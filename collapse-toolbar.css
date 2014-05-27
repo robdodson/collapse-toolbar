@@ -1,0 +1,29 @@
+:host {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 9px;
+}
+#toolbar {
+  height: 64px;
+  font-size: 21px;
+}
+::content > * {
+  margin: 0px 8px 0 8px;
+  text-align: start;
+}
+::content a {
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  color: #666666;
+}
+::content a:hover {
+  color: #0074D9;
+}
+core-menu-button ::content a {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
