@@ -6,33 +6,45 @@
   <script src="../platform/platform.js"></script>
   <link rel="import" href="collapse-toolbar.html">
   <link rel="import" href="../core-icon-button/core-icon-button.html">
-  <style>
-  collapse-toolbar {
-    background: #E4E4E4;
-    margin-bottom: 10px;
-  }
-
-  .logo img {
-    height: 35px;
-    vertical-align: middle;
-  }
-  </style>
+  <link rel="stylesheet" href="demo.css">
 </head>
 
 <body unresolved>
-  <!-- <p>An `collapse-toolbar` looks like this:</p> -->
-
-  <collapse-toolbar query="max-width: 500px">
+  <collapse-toolbar query="max-width: 500px" class="dark-border">
     <div flex class="logo">
-      <a href="#" flex>
-        <img src="lockup.png">
+      <a href="#">
+        <img src="logo.png">
       </a>
     </div>
     <a href="#">Quickstart</a>
     <a href="#">CSS</a>
     <a href="#">Components</a>
   </collapse-toolbar>
-
+  <div class="container banner-container">
+    <div class="banner" layout vertical center>
+      <div class="circle"></div>
+      <div layout flex horizontal>
+        <div flex class="rect"></div>
+        <div flex class="rect"></div>
+        <div flex class="rect"></div>
+        <div flex class="rect"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container quote-container">
+    <div class="quote" layout vertical center>
+      <div class="rect quote dark"></div>
+      <div class="rect quote light"></div>
+      <div class="rect quote light"></div>
+    </div>
+  </div>
+  <div class="container blog-container">
+    <div class="photo"></div>
+    <div class="rect blog light"></div>
+    <div class="rect blog stretch"></div>
+    <div class="rect blog stretch"></div>
+    <div class="rect blog stretch"></div>
+  </div>
 </body>
 
 </html>
