@@ -88,3 +88,19 @@ collapse-toolbar,
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 500px) {
+  .banner .rect {
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .quote.dark {
+    width: 150px;
+  }
+
+  .quote.light {
+    width: 250px;
+  }
+}
