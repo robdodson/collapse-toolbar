@@ -1,6 +1,38 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../core-media-query/core-media-query.html">
 <link rel="import" href="../core-menu-button/core-menu-button.html">
+
+<!--
+&lt;collapse-toolbar&gt; is a responsive toolbar that moves its anchor tags into a `core-menu-button` when a predetermined screen size is reached.
+
+Use the `query` attribute to configure the `collapse-toolbar` with a CSS breakpoint so it knows when to collapse.
+
+##### Example
+
+    <collapse-toolbar query="max-width: 500px">
+      <div flex class="logo">
+        <a href="#">
+          <img src="logo.png">
+        </a>
+      </div>
+      <a href="#">Quickstart</a>
+      <a href="#">CSS</a>
+      <a href="#">Components</a>
+    </collapse-toolbar>
+
+@element collapse-toolbar
+@blurb A configurable, responsive toolbar
+@status alpha
+@homepage http://robdodson.github.io/collapse-toolbar
+-->
+
+<!--
+A CSS breakpoint which will trigger the collapsed state and move all elements into the collapsed menu. If an element has a class `logo` it will not be moved into the collapsed menu.
+
+@attribute query
+@type string
+-->
+
 <polymer-element name="collapse-toolbar" attributes="query" noscript>
   <template>
     <link rel="stylesheet" href="collapse-toolbar.css">
