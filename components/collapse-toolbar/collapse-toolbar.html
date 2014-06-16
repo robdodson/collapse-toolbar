@@ -1,0 +1,59 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-media-query/core-media-query.html">
+<link rel="import" href="../core-menu-button/core-menu-button.html">
+
+<!--
+&lt;collapse-toolbar&gt; is a responsive toolbar that moves its anchor tags into a `core-menu-button` when a predetermined screen size is reached.
+
+Use the `query` attribute to configure the `collapse-toolbar` with a CSS breakpoint so it knows when to collapse.
+
+##### Example
+
+    <collapse-toolbar query="max-width: 500px">
+      <div flex class="logo">
+        <a href="#">
+          <img src="logo.png">
+        </a>
+      </div>
+      <a href="#">Quickstart</a>
+      <a href="#">CSS</a>
+      <a href="#">Components</a>
+    </collapse-toolbar>
+
+@element collapse-toolbar
+@blurb A configurable, responsive toolbar
+@status alpha
+@homepage http://robdodson.github.io/collapse-toolbar
+-->
+
+<!--
+A CSS breakpoint which will trigger the collapsed state and move all elements into the collapsed menu. If an element has a class `logo` it will not be moved into the collapsed menu.
+
+@attribute query
+@type string
+-->
+
+<polymer-element name="collapse-toolbar" attributes="query" noscript>
+  <template>
+    <link rel="stylesheet" href="collapse-toolbar.css">
+
+    <div id="toolbar" layout horizontal center>
+      <content select=".logo"></content>
+      <!-- When smallScreen is true, hide the links... -->
+      <template if="{{smallScreen}}">
+        <core-menu-button icon="menu"
+          inlineMenu halign="right" valign="bottom">
+          <content></content>
+        </core-menu-button>
+      </template>
+      <!-- ...otherwise display them in the toolbar -->
+      <content></content>
+    </div>
+
+    <core-media-query
+      query="{{query}}"
+      queryMatches="{{smallScreen}}">
+    </core-media-query>
+
+  </template>
+</polymer-element>
