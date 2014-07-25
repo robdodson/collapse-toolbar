@@ -18,12 +18,15 @@
   text-decoration: none;
   font-size: 18px;
   color: #666666;
+  margin:5px;
+  background:rgba(255,255,255,0.6);
+  border-radius: 3px;
+  padding:5px;
 }
 ::content a:hover {
   color: #0074D9;
 }
 core-menu-button ::content a {
   display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin:5px 0px;
 }
