@@ -104,3 +104,10 @@ collapse-toolbar,
     width: 250px;
   }
 }
+
+core-dropdown {
+  position: absolute;
+  top: 25px;
+  left: -150px;
+  border: 1px solid #cfcfcf;
+}

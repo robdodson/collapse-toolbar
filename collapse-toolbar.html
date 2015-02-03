@@ -1,6 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../core-media-query/core-media-query.html">
 <link rel="import" href="../core-menu-button/core-menu-button.html">
+<link rel="import" href="../core-icon-button/core-icon-button.html">
+<link rel="import" href="../core-dropdown/core-dropdown.html">
+<link rel="import" href="../core-menu/core-menu.html">
 
 <!--
 &lt;collapse-toolbar&gt; is a responsive toolbar that moves its anchor tags into a `core-menu-button` when a predetermined screen size is reached.
@@ -41,9 +44,13 @@ A CSS breakpoint which will trigger the collapsed state and move all elements in
       <content select=".logo"></content>
       <!-- When smallScreen is true, hide the links... -->
       <template if="{{smallScreen}}">
-        <core-menu-button icon="menu"
-          inlineMenu halign="right" valign="bottom">
-          <content></content>
+        <core-menu-button>
+            <core-icon-button icon="menu"></core-icon-button>
+            <core-dropdown class="dropdown" >
+                <core-menu>
+                    <content></content>
+                </core-menu>
+            </core-dropdown>
         </core-menu-button>
       </template>
       <!-- ...otherwise display them in the toolbar -->

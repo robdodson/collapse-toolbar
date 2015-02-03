@@ -5,6 +5,9 @@
     "polymer": "Polymer/polymer#~0.3.0",
     "core-media-query": "Polymer/core-media-query#~0.3.0",
     "core-menu": "Polymer/core-menu#~0.3.0",
-    "core-menu-button": "Polymer/core-menu-button#~0.3.0"
+    "core-menu-button": "Polymer/core-menu-button#~0.3.0",
+    "core-icon-button": "Polymer/core-icon-button#~0.5.2",
+	"core-dropdown": "Polymer/core-dropdown#~0.5.2",
+	"core-menu": "Polymer/core-menu#~0.5.2"
   }
 }

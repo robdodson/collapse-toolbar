@@ -27,3 +27,10 @@ core-menu-button ::content a {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+core-dropdown {
+  position: absolute;
+  top: 25px;
+  left: -120px;
+  border: 1px solid #cfcfcf;
+}
